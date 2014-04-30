@@ -1,0 +1,19 @@
+# List of source files containing translatable strings.
+
+## Created by Anjuta - will be overwritten
+## If you don't want it to overwrite it,
+## 	Please disable it in the Anjuta project configuration
+
+# Source files
+src/main.cc
+src/bonjour_browser.cc
+src/vncproxy.cc
+src/service_handler.cc
+src/UIManager.cc
+src/wndMain.cc
+src/wndMain_glade.cc
+src/dialogPassword.cc
+src/dialogPassword_glade.cc
+src/pointer.cc
+
+

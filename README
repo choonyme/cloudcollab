@@ -1,0 +1,11 @@
+This package contains 3 parts:
+
+- LibVNCServer package containing libvncserver/libvncclient.
+- DrawTop package containing the overlay drawing collaboration
+  service and a standard whiteboard drawing service. 
+- VNCProxy package containing the VNC proxy server.
+
+The DrawTop package can be changed into a standard drawing collaboration
+application by means of the source code.
+
+For more details on installation, please refer to the INSTALL file.

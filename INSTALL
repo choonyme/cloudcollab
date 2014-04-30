@@ -1,0 +1,45 @@
+This program has been tested in Ubuntu Linux distribution.
+
+==============
+ DEPENDENCIES
+==============
+Please ensure the following dependencies are installed first:
+- libjpeg-dev
+- zlib1g-dev
+- gtkmm2.4-dev
+- libavahi-compat-libdnssd-dev 
+- libglademm-2.4-dev
+
+=============
+ COMPILATION
+=============
+To compile the package:
+- Change to the directory where you have extracted the files.
+- Run ./compile.sh
+
+The binary files are located in:
+- VNCProxy: vncproxy/src
+- DrawTop: drawtop/src
+
+To compile WhiteBoard, comment out #DEFINE OVERLAY from the
+following files:
+- drawtop/src/drawtop.cc
+Then recompile WhiteBoard. The binary is then a WhiteBoard service.
+
+=================
+ TROUBLESHOOTING
+=================
+In case the installation procedure does not go as smoothly, this
+is what compile.sh does:
+- Compile LibVNCServer package. This is needed by VNCProxy and
+  DrawTop.
+- Compile VNCProxy.
+- Compile DrawTop. 
+
+Any compilation problem probably arises from NOT HAVING ALL
+DEPENDENCIES REQUIREMENT by LibVNCServer. So focus on that!!!
+Most packages in LibVNCServer (e.g. examples) are not needed.
+All that is needed is:
+- ./configure in LibVNCServer root directory.
+- make in LibVNCServer-0.8.2/libvncserver (To get libvncserver.a)
+- make in LibVNCServer-0.8.2/libvncclient (To get libvncclient.a)
